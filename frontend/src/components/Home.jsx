@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <div className="flex flex-wrap">
-
       {data?.map((train, index) => (
         <TrainCard key={index} train={train} />
       ))}

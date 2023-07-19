@@ -11,11 +11,11 @@ const TrainCard = ({ train }) => {
 
   return (
     <>
-      <div className="md:w-1/2 lg:w-1/3 pr-2 pb-4 py-6 flex flex-col gap-1 border-[2px] border-t-0 px-4 rounded-b-lg">
+      <div className="md:w-1/4 w-full p-2 flex flex-col border-[2px] m-2 px-4 rounded-lg">
         <div className='' >
           <h2>{trainName}</h2>
           <p>Train Number: {trainNumber}</p>
-          <p className="text-red-500">Price:</p>
+          <p className="text-gray-600">Price:</p>
           <p className="text-gray-600">Sleeper: ₹{price.sleeper}</p>
           <p className="text-gray-600">AC: ₹{price.AC}</p>
           <p className="text-gray-600">Train Number: {trainNumber}</p>
