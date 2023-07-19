@@ -1,5 +1,6 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react'
+import { Link, useParams } from 'react-router-dom';
 
 const TrainCard = ({ train }) => {
   const { trainName, trainNumber, departureTime, seatsAvailable, price, delayedBy } = train;
@@ -8,9 +9,10 @@ const TrainCard = ({ train }) => {
     return `${time.Hours.toString().padStart(2, '0')}:${time.Minutes.toString().padStart(2, '0')}`;
   };
 
+  const { trainId } = useParams();
 
   return (
-    <>
+    <Link to={`/${trainId}`}>
       <div className="md:w-1/4 w-full p-2 flex flex-col border-[2px] m-2 px-4 rounded-lg">
         <div className='' >
           <h2>{trainName}</h2>
@@ -26,7 +28,7 @@ const TrainCard = ({ train }) => {
           <p className="text-gray-600">AC: {seatsAvailable.AC}</p>
         </div>
       </div>
-    </>
+    </Link>
   )
 }
 
