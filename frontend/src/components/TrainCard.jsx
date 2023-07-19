@@ -10,8 +10,8 @@ const TrainCard = ({ train }) => {
   };
 
   return (
-    <Link to={`/${trainNumber}`}>
-      <div className="md:w-1/4 w-full p-2 flex flex-col border-[2px] m-2 px-4 rounded-lg">
+    <div className="md:w-1/4 w-full p-2 flex flex-col border-[2px] m-2 px-4 rounded-lg">
+      <Link to={`/${trainNumber}`}>
         <div className='' >
           <h2>{trainName}</h2>
           <p>Train Number: {trainNumber}</p>
@@ -25,8 +25,8 @@ const TrainCard = ({ train }) => {
           <p className="text-gray-600">Sleeper: {seatsAvailable.sleeper}</p>
           <p className="text-gray-600">AC: {seatsAvailable.AC}</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 
