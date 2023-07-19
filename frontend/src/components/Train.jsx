@@ -10,7 +10,7 @@ const Train = () => {
     const token = localStorage.getItem("token");
     const getTrain = async () => {
       const { data } = await axios.get(
-        `http://20.244.56.144/train/trains/${trainId}`,
+        `http://localhost:8000/api/trains/${trainId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
